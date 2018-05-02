@@ -78,6 +78,7 @@ class Board extends React.Component {
             selectedPiece: null
         };
         this.handleClick = this.handleClick.bind(this);
+        this.handleReset = this.handleReset.bind(this);
     }
 
     getStartingCoords(playerNumber) {
@@ -293,6 +294,15 @@ class Board extends React.Component {
         }
     }
 
+    handleReset() {
+        this.setState({
+            player1Pieces: this.getStartingCoords(1).map((coord) => new Coord(coord[0], coord[1])),
+            player2Pieces: this.getStartingCoords(2).map((coord) => new Coord(coord[0], coord[1])),
+            currentGameState: Math.floor(Math.random() * 2) + 1,
+            selectedPiece: null
+        });
+    }
+
     isClickable(coords) {
         const state = this.state;
         const status = state.currentGameState;
@@ -335,6 +345,9 @@ class Board extends React.Component {
     render() {
         return (
         <div className="outer">
+            <div className="reset">
+                <button onClick={this.handleReset}>Reset</button>
+            </div>
             <div className="message">{this.getMessage()}</div>
             {this.renderBoard()}
         </div>

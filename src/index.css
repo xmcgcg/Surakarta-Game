@@ -38,7 +38,7 @@ div.message {
 div.outer {
   width: 870px;
   height: 870px;
-  padding: 118px 156px 176px 156px;
+  padding: 83px 156px 176px 156px;
   background-image: url("./img/surakarta_board.png");
   text-align: center;
 }
@@ -58,4 +58,12 @@ div.purple {
 .selected {
   background-color: lightgray;
   background-blend-mode: multiply;
+}
+
+button {
+  font-size: 20px;
+}
+
+.reset {
+  margin-bottom: 10px;
 }
