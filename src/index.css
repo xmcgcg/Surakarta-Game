@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+div.slot {
+  float: left;
+  width: 93px;
+  height: 93px;
+  /* background-image: url("./img/purple_piece.png"); */
+  background-size: 63px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: initial;
+  color: white;
+}
+
+div.board {
+  width: 600px;
+  height: 600px;
+}
+
+div.message {
+  background-color: rgba(200, 200, 200, 0.5);
+  height: 36px;
+  width: 300px;
+  margin: 0 auto 0 auto;
+  font-size: 36px;
+}
+
+div.outer {
+  width: 870px;
+  height: 870px;
+  padding: 118px 156px 176px 156px;
+  background-image: url("./img/surakarta_board.png");
+  text-align: center;
+}
+
+div.aqua {
+  background-image: url("./img/aqua_piece.png");
+}
+
+div.purple {
+  background-image: url("./img/purple_piece.png");
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: lightgray;
+  background-blend-mode: multiply;
+}
